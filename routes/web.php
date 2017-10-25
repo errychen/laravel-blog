@@ -21,14 +21,17 @@ Route::post('login', 'Auth\LoginController@login');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
 
-Route::group(['middleware' => 'auth'], function () {
-    Route::get('/', 'HomeController@index')->name('home:index')->middleware('permission');
-    Route::get('/menu', 'MenuController@index')->name('menu:index')->middleware('permission');
-    Route::get('/menu/lists', 'MenuController@lists')->name('menu:lists')->middleware('permission');
+Route::get('/', 'HomeController@index')->name('home:index');
 
 
-
-});
+//Route::group(['middleware' => 'auth'], function () {
+//    Route::get('/', 'HomeController@index')->name('home:index')->middleware('permission');
+//    Route::get('/menu', 'MenuController@index')->name('menu:index')->middleware('permission');
+//    Route::get('/menu/lists', 'MenuController@lists')->name('menu:lists')->middleware('permission');
+//
+//
+//
+//});
 
 
 
